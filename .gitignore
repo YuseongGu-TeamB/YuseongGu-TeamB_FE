@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Keep application lockfiles for reproducible, auditable builds.
+!package-lock.json
+!src-tauri/Cargo.lock
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

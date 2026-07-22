@@ -1,5 +1,13 @@
 # React + TypeScript + Vite
 
+## Reproducible builds
+
+`package-lock.json` and `src-tauri/Cargo.lock` are part of the application source and must be committed. Do not add either lockfile to `.gitignore`.
+
+- Install JavaScript dependencies with `npm ci` so the versions in `package-lock.json` are used exactly.
+- Build Rust with `cargo build --locked` (or an equivalent Tauri command that passes `--locked`) so Cargo does not update `Cargo.lock` implicitly.
+- Update lockfiles intentionally together with dependency changes, and review the resulting diff and security audit output.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
