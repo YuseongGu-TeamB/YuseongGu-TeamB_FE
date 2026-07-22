@@ -1,11 +1,9 @@
 {
   "$schema": "../gen/schemas/desktop-schema.json",
   "identifier": "default",
-  "description": "enables the default permissions",
+  "description": "Main window capability with no frontend-accessible Tauri commands",
   "windows": [
     "main"
   ],
-  "permissions": [
-    "core:default"
-  ]
+  "permissions": []
 }
